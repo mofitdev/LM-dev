@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDailyRate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDailyRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDailyRateResult" type="tns:ArrayOfOfficialdailyrate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOfficialdailyrate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="officialdailyrate" nillable="true" type="tns:officialdailyrate" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="officialdailyrate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Component">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="v01USD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v02EUR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v03JPY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v04CHF" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v05SEK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v06GBP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v07BGN" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v08HUF" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v09EGP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v10INR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v11HKD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v12RUB" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v13KZT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v14CNY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v15KRW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v16KPW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v17CAD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v18AUD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v19CZK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v20TWD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v21THB" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v22IDR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v23MYR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v24SGD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v25AED" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v26KWD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v27NZD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v28DKK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v29PLN" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v30UAH" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v31NOK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v32NPR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v33ZAR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v34TRY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v35XAU" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v36XAG" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v37SDR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v38XAUinUSD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v39XAGinUSD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v40VND" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vGarag" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Component">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="GetDynamicDailyRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDynamicDailyRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDynamicDailyRateResult" type="tns:ArrayOfOfficialdailyrate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDynamicAvarageMonthlyDailyRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDynamicAvarageMonthlyDailyRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDynamicAvarageMonthlyDailyRateResult" type="tns:ArrayOfOfficialaveragemonthlyrate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOfficialaveragemonthlyrate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="officialaveragemonthlyrate" nillable="true" type="tns:officialaveragemonthlyrate" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="officialaveragemonthlyrate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Component">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="v01USD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v02USDAverage" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v03EUR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v04SEK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v05BGN" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v06HUF" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v07CZK" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v08KRW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v09JPY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v10CNY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v11GBP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v12HKD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v13RUB" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v14CHF" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v15EGP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v16CAD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v17AUD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v18THB" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v19IDR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v20MYR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v21SGD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v22XAU" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v23XAG" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="v24SDR" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vMonth" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vYEAR" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetDynamicGoldSilverPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDynamicGoldSilverPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDynamicGoldSilverPriceResult" type="tns:ArrayOfGoldsilverprice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGoldsilverprice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="goldsilverprice" nillable="true" type="tns:goldsilverprice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="goldsilverprice">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Component">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="vDATE" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="vGOLDBUY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vGOLDSELL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vSILVERBUY" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="vSILVERSELL" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDailyRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDailyRate" />
+  </wsdl:message>
+  <wsdl:message name="GetDailyRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDailyRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicDailyRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDynamicDailyRate" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicDailyRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDynamicDailyRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicAvarageMonthlyDailyRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDynamicAvarageMonthlyDailyRate" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicAvarageMonthlyDailyRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDynamicAvarageMonthlyDailyRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicGoldSilverPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDynamicGoldSilverPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetDynamicGoldSilverPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDynamicGoldSilverPriceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetDailyRate">
+      <wsdl:input message="tns:GetDailyRateSoapIn" />
+      <wsdl:output message="tns:GetDailyRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicDailyRate">
+      <wsdl:input message="tns:GetDynamicDailyRateSoapIn" />
+      <wsdl:output message="tns:GetDynamicDailyRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicAvarageMonthlyDailyRate">
+      <wsdl:input message="tns:GetDynamicAvarageMonthlyDailyRateSoapIn" />
+      <wsdl:output message="tns:GetDynamicAvarageMonthlyDailyRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicGoldSilverPrice">
+      <wsdl:input message="tns:GetDynamicGoldSilverPriceSoapIn" />
+      <wsdl:output message="tns:GetDynamicGoldSilverPriceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDailyRate">
+      <soap:operation soapAction="http://tempuri.org/GetDailyRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicDailyRate">
+      <soap:operation soapAction="http://tempuri.org/GetDynamicDailyRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicAvarageMonthlyDailyRate">
+      <soap:operation soapAction="http://tempuri.org/GetDynamicAvarageMonthlyDailyRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicGoldSilverPrice">
+      <soap:operation soapAction="http://tempuri.org/GetDynamicGoldSilverPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDailyRate">
+      <soap12:operation soapAction="http://tempuri.org/GetDailyRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicDailyRate">
+      <soap12:operation soapAction="http://tempuri.org/GetDynamicDailyRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicAvarageMonthlyDailyRate">
+      <soap12:operation soapAction="http://tempuri.org/GetDynamicAvarageMonthlyDailyRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicGoldSilverPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetDynamicGoldSilverPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="https://www.mongolbank.mn/service/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="https://www.mongolbank.mn/service/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

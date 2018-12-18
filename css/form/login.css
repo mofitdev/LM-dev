@@ -1,0 +1,59 @@
+﻿html, body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    font-size: 13px;
+    color: #404040;
+    direction: ltr;
+    -webkit-text-size-adjust: none;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+div {
+    display: block;
+}
+
+.google-header-bar {
+    height: 71px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.google-header-bar.centered {
+    height: 83px;
+    border: 0;
+    height: 108px;
+}
+.clearfix {
+    zoom: 1;
+}
+.content {
+    padding: 0 44px;
+}
+.google-header-bar.centered .header .logo {
+    margin: 25px auto 20px;
+}
+.google-header-bar.centered .header .logo {
+    float: none;
+    margin: 40px auto 30px;
+    display: block;
+}
+.header .logo {
+    background-image: url(http://ssl.gstatic.com/accounts/ui/logo_1x.png);
+    background-size: 116px 38px;
+    background-repeat: no-repeat;
+    margin: 17px 0 0;
+    float: left;
+    height: 38px;
+    width: 116px;
+}
+
+.main {
+    padding-bottom: 100px;
+}
