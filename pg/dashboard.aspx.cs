@@ -223,26 +223,26 @@ PIVOT(
                 //col 1 section 2 //letter person
                 letterDate.InnerHtml = DateTime.Today.ToString("yyyy-MM-dd");
                 letterStaffName.InnerHtml = userStaffName;
-                string strLetter0 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE IS NULL AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
-                string strLetter1 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId+ " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND RETURNDATE > = CLOSEDDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
-                string strLetter2 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId+ " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE > = RETURNDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                //string strLetter0 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE IS NULL AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                //string strLetter1 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId+ " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND RETURNDATE > = CLOSEDDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                //string strLetter2 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOSTAFFID = " + userId+ " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE > = RETURNDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
 
-                ds = myObj.ExecuteDataSet(strLetter0 + "     "+ strLetter1 + "     " + strLetter2);
-                letterKartCount.InnerHtml = ds.Tables[0].Rows[0]["CNT"].ToString();
-                letterTotalKartCount.InnerHtml = (Int32.Parse(ds.Tables[0].Rows[0]["CNT"].ToString())+Int32.Parse(ds.Tables[1].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[2].Rows[0]["CNT"].ToString())).ToString();
-                letterTotalClosedKartCount.InnerHtml = ds.Tables[1].Rows[0]["CNT"].ToString();
-                letterTotalLateKartCount.InnerHtml = ds.Tables[2].Rows[0]["CNT"].ToString();
+                //ds = myObj.ExecuteDataSet(strLetter0 + "     "+ strLetter1 + "     " + strLetter2);
+                //letterKartCount.InnerHtml = ds.Tables[0].Rows[0]["CNT"].ToString();
+                //letterTotalKartCount.InnerHtml = (Int32.Parse(ds.Tables[0].Rows[0]["CNT"].ToString())+Int32.Parse(ds.Tables[1].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[2].Rows[0]["CNT"].ToString())).ToString();
+                //letterTotalClosedKartCount.InnerHtml = ds.Tables[1].Rows[0]["CNT"].ToString();
+                //letterTotalLateKartCount.InnerHtml = ds.Tables[2].Rows[0]["CNT"].ToString();
 
-                //col 2 section 2 //negj person
-                strLetter0 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE IS NULL AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
-                strLetter1 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND RETURNDATE > = CLOSEDDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
-                strLetter2 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE > = RETURNDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                ////col 2 section 2 //negj person
+                //strLetter0 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE IS NULL AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                //strLetter1 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND RETURNDATE > = CLOSEDDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
+                //strLetter2 = "SELECT COUNT(1) as CNT FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE TOBRID = " + userHeltesId + " AND DOCUMENTTYPE = 'I' AND DOCNOTEPKID != 51 AND ISREPLYDOC = 'Y' AND CLOSEDDATE > = RETURNDATE AND PARENTPKID IS NOT NULL AND PKID NOT IN(SELECT PARENTPKID FROM MOFDMS" + currentYear + ".dbo.Document WITH(NOLOCK) WHERE PARENTPKID IS NOT NULL)";
 
-                ds = myObj.ExecuteDataSet(strLetter0 + "     " + strLetter1 + "     " + strLetter2);
-                dashboardtCol2Sec2KartCount.InnerHtml = ds.Tables[0].Rows[0]["CNT"].ToString();
-                dashboardtCol2Sec2TotalKartCount.InnerHtml = (Int32.Parse(ds.Tables[0].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[1].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[2].Rows[0]["CNT"].ToString())).ToString();
-                dashboardtCol2Sec2TotalClosedKartCount.InnerHtml = ds.Tables[1].Rows[0]["CNT"].ToString();
-                dashboardtCol2Sec2TotalLateKartCount.InnerHtml = ds.Tables[2].Rows[0]["CNT"].ToString();
+                //ds = myObj.ExecuteDataSet(strLetter0 + "     " + strLetter1 + "     " + strLetter2);
+                //dashboardtCol2Sec2KartCount.InnerHtml = ds.Tables[0].Rows[0]["CNT"].ToString();
+                //dashboardtCol2Sec2TotalKartCount.InnerHtml = (Int32.Parse(ds.Tables[0].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[1].Rows[0]["CNT"].ToString()) + Int32.Parse(ds.Tables[2].Rows[0]["CNT"].ToString())).ToString();
+                //dashboardtCol2Sec2TotalClosedKartCount.InnerHtml = ds.Tables[1].Rows[0]["CNT"].ToString();
+                //dashboardtCol2Sec2TotalLateKartCount.InnerHtml = ds.Tables[2].Rows[0]["CNT"].ToString();
 
                 dashboardtCol2Sec2SpanInitname.InnerHtml = userHeltesInitName;
                 dashboardtCol2Sec2SpanDate.InnerHtml= DateTime.Today.ToString("yyyy-MM-dd");
